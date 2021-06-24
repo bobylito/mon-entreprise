@@ -6,6 +6,7 @@ on:
       - .github/workflows/publish-publicodes.yaml
 
 jobs:
+  #TODO: this should be moved in the test action
   test:
     if: contains(join(github.event.commits.*.message, ' | '), '📦 Publicodes v1.0.0-beta.')
     runs-on: ubuntu-18.04
